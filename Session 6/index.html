@@ -4,28 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Hogwarts Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1> Welcome to Hogwarts</h1>
-        
+    <h1> Welcome to <br> Hogwarts </h1>
     </header>
     <nav>
-        <ul>
-            <li> Home Page</li>
-            <li> Browse </li>
-            <li> About us </li>
-            <li> Example page 1 </li>
-            <li> Example page 2 </li>
-        </ul>
+        <a href="default.asp">Home Page</a> 
+        <a href="browse.asp">Browse </a> 
+        <a href="aboutus.asp">About us </a> 
+        <a href="example1">Example page 1 </a> 
+        <a href="example2">Example page 2 </a> 
     </nav>
-    <section>
-        <h2> Why study with us ? </h2>
-        <div class="container1">
-        <img src="horntail.jpeg" alt=" a picture of a dragon">
-        <h3> Nature!</h3>
+    <div class="container">
+        <section>
+            <h2> Why Study with us ?</h2>
+            <div class="left">
+            <img src="horntail.jpeg" alt=" a picture of a dragon">
+            </div>
+            <div class="right">
+                <h3>Danger!</h3>
+                <p>
+                    Yeah, you could go to a normal school and feel all safe. 
+                    or you couls come here where we will actively throw you 
+                    into life threatening situtations!            
+                </p>
+                <p>
+                    We will ease you in gently, where you will enjoy
+                    the delights of backfiring spells, expoding in your face.
+                    From there we will progress you to fighting an assortment of dangerous
+                    creatures. You may even get the oppourinty to risk your life aganist huge
+                    dragons for sport! Cool as, right?
+                </p>
+                <p>
+                    Even some of our staff are happy to concuss you with a book
+                    if you don't look like you're studying.
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="left">
+                <h3> Nature!</h3>
         <p> 
             Do you like nature? Great! As you walk around our grounds 
             you will quickly learn that nature here doesn't like you!
@@ -38,56 +59,45 @@
             Do you like spider? Great! We have GIANT hairy ones that you can 
             totally chat to before experiencing the thrill of running for your life.
         </p>
-        <img src="fight.jpeg" alt=" a duel betweeen Harry and Voldermont">
-
         </div>
-        <div class="container2">
-            <h3>Danger!</h3>
-            <p>
-                Yeah, you could go to a normal school and feel all safe. 
-                or you couls come here where we will actively throw you 
-                into life threatening situtations!            
-            </p>
-            <p>
-                We will ease you in gently, where you will enjoy
-                the delights of backfiring spells, expoding in your face.
-                From there we will progress you to fighting an assortment of dangerous
-                creatures. You may even get the oppourinty to risk your life aganist huge
-                dragons for sport! Cool as, right?
-            </p>
-            <p>
-                Even some of our staff are happy to concuss you with a book
-                if you don't look like you're studying.
-            </p>
-            <img src="willow.jpeg" alt="picture of a big scary tree">
-            
-            <h3> The Chosen One Package!!!!</h3>
-            <p>
-             if you need more, don't worry. We got you!
-             Upgrade to our Chosen ONE package adn we will provide you
-             with your own arch enemy who will stop at nothing to eviscerate you!
-            
-            </p>
-            <p>
-                You'll also have an amazing time learning politics as your 
-                enemy takes control of the goverment and turns the whole world
-                aganist you!
-            </p>
-            <p>
-                Still not enough! Well, if you hang on in there you will 
-                finally get a boss battle where the stakes are legitmatelt high.
-                How cool is that?
-            </p>
+        <div class="right">
+        <img src="willow.jpeg" alt="picture of a big scary tree">
         </div>
-        <h2> Testimonials</h2>
-        <br>
-        <p> <q>Uuuuuuuuuu Ahhrrrrrr Uhrrrr AHhhrrrr Aaaaahg</q> - Chewbacca</p>
-        <br>
-        <p><q>Hyeeeh Kyaaah hyaaah hyet haa</q> - Link</p>
-        <br>
-        <p><q>....</q> - Red</p>
-        <br>
-        <p><q> This place is not sus !</q>- Among Us Player</p>
-    </section>
+        </section>
+        <section>
+            <div class="left">
+            <img src="fight.jpeg" alt=" a duel betweeen Harry and Voldermont">
+            </div>
+            <div class="right">
+                <h3> The Chosen One Package!!!!</h3>
+                <p>
+                 if you need more, don't worry. We got you!
+                 Upgrade to our Chosen ONE package adn we will provide you
+                 with your own arch enemy who will stop at nothing to eviscerate you!
+                
+                </p>
+                <p>
+                    You'll also have an amazing time learning politics as your 
+                    enemy takes control of the goverment and turns the whole world
+                    aganist you!
+                </p>
+                <p>
+                    Still not enough! Well, if you hang on in there you will 
+                    finally get a boss battle where the stakes are legitmatelt high.
+                    How cool is that?
+                </p>
+            </div>
+        </section>
+        <section id="testimonials">
+            <h2> Testimonials</h2>
+            <p> <q>Uuuuuuuuuu Ahhrrrrrr Uhrrrr AHhhrrrr Aaaaahg</q> - Chewbacca</p>
+             <br>
+            <p><q>Hyeeeh Kyaaah hyaaah hyet haa</q> - Link</p>
+            <br>
+            <p><q>....</q> - Red</p>
+            <br>
+            <p><q> This place is not sus !</q>- Among Us Player</p>
+        </section>
+    </div>
 </body>
 </html>
