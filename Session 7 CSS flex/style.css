@@ -1,0 +1,54 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    width: 150vh;
+    height: 100vh;
+}
+.container {
+ background-color: cadetblue;
+ display: flex;
+}
+/* move box to right */
+.redbox {
+  background-color: red;
+  display: flex;
+  height: 200px;
+  width: 20%;
+  justify-self: flex-end;
+  align-self: flex-start;
+}
+
+.yellowbox {
+    background-color: yellow;
+    display: flex;
+    align-self: center;
+    height: 75px;
+    width: 20%;
+}
+
+.purplebox {
+    background-color: purple;
+    display: flex;
+    height: 300px ;
+    width: 20%;
+    justify-self: flex-start;
+    align-self: flex-end;
+}
+
+.brownbox {
+    background-color: brown; 
+    display: flex;
+    width: 30%;
+    height: 100px;
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+/* move box to left */
+.bluebox {
+    background-color: blue;
+    display: flex;
+    width: 45%;
+    height: 140px;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
