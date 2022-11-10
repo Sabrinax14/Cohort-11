@@ -1,0 +1,39 @@
+body {
+    background: linear-gradient( 90deg, rgb(115, 252, 192) 0%, rgb(121, 102, 241) 69%);
+     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+table.cal {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    box-shadow: black 0px 22px 70px 4px;
+   
+}
+
+input[type="button"]{
+    color: black;
+    cursor:pointer;
+    background-color: white;
+    font-size: 2em;
+    border: 1px solid white;
+    padding: 20px;
+    width:100%;
+    margin: 10px 60px 10px 0px;
+}
+
+
+input[ type="text"]{
+    color: black;
+    background: white;
+    border: 1px solid white;
+    padding: 20px;
+    font-size: 2em;
+    width: 100%;
+}
+
+#clear{
+    background-color: rgb(159, 233, 233);
+    border: 1px solid  rgb(159, 233, 233);
+}
