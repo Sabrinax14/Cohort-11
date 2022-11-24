@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+    --bg-color: hsl(218, 23%, 16%);
+    --box-color: hsl(217, 19%, 38%);
+    --box-shadow-color: hsl(217, 19%, 24%);
+    --button-color: hsl(150, 100%, 66%);
+    --button-shadow-color: hsl(193, 38%, 86%);
+    --quote-font-size: 20px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+    height: 97%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 28%;
+    height: 45%;
+    position: relative;
+    background-color: var(--box-shadow-color);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container > h1 {
+    font-size: 14px;
+    position: absolute;
+    top: 1.5rem;
+    color: var(--button-color);
+}
+
+.advice-generated {
+    width: 90%;
+    text-align: center;
+    font-size: var(--quote-font-size);
+    font-display: 'Manrope', sans-serif;
+    color: #fff;
+    position: absolute;
+    top: 2rem;
+    margin-top: 2rem;
+}
+
+.divider {
+    width: 80%;
+    position: absolute;
+    bottom: 18%;
+}
+
+.advice-generator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    position: absolute;
+    bottom: -1rem;
+    background-color: var(--button-color);
+    cursor: pointer;
+}
+
+.dice:hover {
+    transform: rotate(50deg);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: #fff;
+}
+
+.attribution a {
+    color: var(--button-color);
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        height: 50%;
+    }
+}
+
+

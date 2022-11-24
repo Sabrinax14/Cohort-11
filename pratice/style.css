@@ -1,0 +1,57 @@
+body {
+  overflow-x: hidden;
+  height: 300vh;
+  overflow-y: block;
+  margin-top: 0.5rem;
+ 
+}
+
+nav {
+    margin-top: 5rem;
+    position: absolute;
+    width: 20rem;
+    height: 50%;
+    right: -20rem;
+    top: 0rem;
+    background-color: lightgray;
+  }
+
+.nav.active {
+    right: 0;
+    z-index: 1;
+    position: fixed;
+    transition: right 1.5s linear;
+  }
+
+.nav.unActive {
+    position: fixed;
+    transition: right 1.5s linear;
+    right: -20rem;
+  }
+
+.nav .toggle {
+    top: 0.5rem;
+    right: 0rem;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: azure;
+  }
+  
+.toggle {
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    margin-top: 0.5rem;
+    
+  }
+
+  @media screen and (max-width:900px) {
+    .nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+    
+  }

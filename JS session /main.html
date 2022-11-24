@@ -5,9 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="main.js"> defer</script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div id="backgroundChange"></div>
-    <script src="mainn.js"></script>
+    <div class=" box flex-col bg-red-400 text-white justify-center">
+        <form action="" onsubmit=""createNewObject(event)>
+            <div class="form-row mb-4 text-black">
+               <label for="first">First Name</label>
+                <input type="text" id="first" name="first">  
+            </div>
+            <div class="form-row mb-4 text-black">
+                <label for="last">Last Name</label>
+                <input type="text" id="last" name="last">  
+             </div>
+             <div class="form-row mb-4 text-black">
+                <label for="age">Age</label>
+                <input type="text" id="age" name="age">  
+             </div>
+             <div class="form-row mb-4 text-black">
+                <label for="last">Title</label>
+                <input type="text" id="last" name="last">  
+             </div>
+             <button type="submit" class="bg-green-400 p-4"> submit</button>
+        </form>
+
+    </div>
+    
 </body>
 </html>

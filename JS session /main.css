@@ -1,0 +1,86 @@
+body{
+    margin:0;
+    padding:0;
+    width:100vw;
+    height:100vh;
+}
+
+.box1{
+    display:block;
+    width: 30rem;
+    height:10rem;
+    background-color: aqua;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+.box1 h1{
+    font-size: 3rem;
+}
+
+.box2{
+    display: flex;
+    width: 59%;
+    height:25%;
+    background-color: chartreuse;
+    overflow: hidden;
+    margin-bottom: 2rem;
+
+}
+.box2 h1{
+    font-size: 3rem;
+}
+
+
+.box3{
+    display: block;
+    width: 30em;
+    height: 10em;
+    background-color: rgb(224, 82, 82);
+    overflow: hidden;
+}
+
+.box3 h1{
+    font-size: 3rem;
+}
+
+@media screen and (min-width: 900px) {
+    .box1 {
+     background-color: blue;
+     color: azure;
+    }
+
+
+  }
+
+
+  #box {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-top: 5em;
+    background-color: red;
+    animation: move 6s infinite;
+  }
+
+  @keyframes move {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(100px, 0);
+      background-color: aqua;
+    }
+    50% {
+      transform: translate(100px, 100px);
+      background-color: chartreuse;
+    }
+    75% {
+      transform: translate(0, 100px);
+      background-color: blue;
+    }
+    100% {
+      transform: translate(0, 0);
+      background-color: red;
+    }
+}
