@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>  
+  <style>
+        .form-container {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .booking-form form {
+            width: 600px;
+        }
+        .form-row {
+            margin-bottom: 1rem;
+        }
+    </style>
+<body>
+   
+
+    <h1> Booking form </h1>
+    <!-- 
+        name - text
+        number of people  - select up to 10 ( then contact resturtant)
+        tel  - tel
+        allergries - checkbox  
+        vegan or not - radio 
+        dates - date
+    
+        other comments -  textarea
+    -->
+
+    <div class="form-container">
+    <form action="" id="booking-form">
+        <!-- mane inout -->
+        <div class=" form-row">
+            <label for="name"> Your name :</label>
+            <input type="text" name="name" id="name">
+        </div>
+          <!-- dates inout -->
+          <div class=" form-row">
+            <label for="start">Please select date of booking</label>
+            <input type="date" id="booking-date" name="booking-date" >
+        </div>
+        <!-- number of people inout -->
+        <div class=" form-row">
+         <label for="numberofPpl"> How many people :</label>
+         <select type="numberofPpl"  id="numberofPpl">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="0"> more than 10 people</option>
+         </select>
+        </div>
+        <!-- tel inout -->
+        <div class=" form-row">
+            <label for="telphone"> Your Telephone :</label>
+            <input type="tel" name="tel" id="tel">
+        </div>
+          <!-- allergies inout -->
+          <div class=" form-row">
+            <fieldset>
+                <legend>Allergies</legend>
+     
+                <label for="peanuts">Peanuts</label>
+                <input type="checkbox" name="allergies" id="peanuts" value="peanuts">
+
+                <label for="seafood">Seafood</label>
+                <input type="checkbox" name="allergies" id="seafood" value="seafood">
+
+                <label for="other">Other - please specify</label>
+                <input type="checkbox" name="allergies" id="other" value="other">
+
+                <textarea name="specify-other" id="specify-other" cols="30" rows="10" placeholder="Add details of other allergies here"></textarea>
+            </fieldset>
+        </div>
+        <!-- vegan inout -->
+        <div class=" form-row">
+            <label for="vegan"> Vegan or Veggie :</label>
+            <input type="checkbox" name="vegan" id="vegan">
+        </div>
+    
+        <!-- other inout -->
+             <div class=" form-row">
+            <label for="othercomments"> Other comments :</label>
+            <br>
+            <textarea id ='othercomments' name="othercomments" rows="4" cols="25" > </textarea>
+            </div>
+
+        <button type="submit"> Submit</button>
+
+    </form>
+   </div>
+
+   <script>
+    // format the date 
+    const d = new Date();
+        const dateInput = document.getElementById('booking-date');
+        const todayDate =  d.toISOString().substring(0,10);
+        dateInput.value = todayDate;
+        dateInput.min = todayDate;
+        dateInput.max = d.setMonth(d.getMonth() + 1);
+        console.log(dateInput.value);
+
+    // hide additional textarrea section 
+
+    const specifyOther = document.getElementById('specify-other');
+        specifyOther.style.display = "none"; /// hide by default
+        const allergiesInput = document.querySelector('input#other');
+        allergiesInput.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                specifyOther.style.display = "block";
+            } else {
+                specifyOther.style.display = "none";
+            }
+        })
+
+            //submit handler
+            const form = document.getElementById('booking-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+
+            const checkboxes = document.getElementsByName('allergies');
+         
+            let selectedAllergies = "";
+            for (let i=0; i < checkboxes.length;i++) 
+            {
+                // console.log(checkboxes[i]);
+                if (checkboxes[i].checked) 
+                {
+                    selectedAllergies += (i > 0) ? ("," + checkboxes[i].value) : (checkboxes[i].value);
+                }
+            }
+         
+            console.log(selectedAllergies);
+
+            // send email
+
+            const name = document.getElementById('name').value;
+            const tel = document.getElementById('tel').value;
+            const bDate = document.getElementById('booking-date').value;
+            const numberOfPpl = document.getElementById('numberOfPpl').value;
+            console.log('name: ', name );
+            console.log('tel: ', tel );
+            console.log('bDate: ', bDate );
+            console.log('numberOfPpl: ', numberOfPpl );
+            console.log('selected allergies: ', selectedAllergies );
+           
+        })
+
+
+    
+   </script>
+</body>
+</html>
